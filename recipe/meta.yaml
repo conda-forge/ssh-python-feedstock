@@ -23,6 +23,7 @@ requirements:
     - cython
     - libssh
     - pip
+    - setuptools
   run:
     - python
 
