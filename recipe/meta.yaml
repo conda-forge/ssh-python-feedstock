@@ -1,5 +1,5 @@
 {% set name = "ssh-python" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c7115f1f2a63334f3d9bd65c12f2f2706a432beb5e945d38f44781fef7f52dc8
+  sha256: be44618803fcaa1c2cd0298b3fb5f3064220a8b3dd36670ac0cc08efc7ae2aaf
 
 build:
   skip: true  # [py<36 or win]
