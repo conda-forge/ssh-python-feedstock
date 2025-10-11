@@ -1,5 +1,5 @@
 {% set name = "ssh-python" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: be44618803fcaa1c2cd0298b3fb5f3064220a8b3dd36670ac0cc08efc7ae2aaf
+  sha256: fc901f2c9c48594aded3eeb4bb2bca11bd80c8a0f8cabf61fa889fcd86c3214c
 
 build:
   skip: true  # [py<36 or win]
   script: SYSTEM_LIBSSH=1 {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
